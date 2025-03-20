@@ -1,0 +1,33 @@
+modLoader = "kotlinforforge"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "whiteout"
+version = "1.6-neoforge-1.0.1"
+displayName = "Cobblemon Whiteout"
+authors = "timinc aka Timothy Metcalfe"
+description = '''
+What if your player got KO'd when your Cobblemon team wiped out, like in the games?
+'''
+
+[[dependencies.cobblemon-whiteout]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.21.1]"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.cobblemon-whiteout]]
+modId = "neoforge"
+mandatory = true
+versionRange = "[21.1.66,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.cobblemon-whiteout]]
+modId = "cobblemon"
+mandatory = true
+versionRange = "[1.6.0,1.7.0)"
+ordering = "AFTER"
+side = "BOTH"
