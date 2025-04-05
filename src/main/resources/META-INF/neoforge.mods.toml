@@ -4,7 +4,7 @@ license = "MIT"
 
 [[mods]]
 modId = "whiteout"
-version = "1.6-neoforge-1.0.1"
+version = "1.6-neoforge-1.0.2"
 displayName = "Cobblemon Whiteout"
 authors = "timinc aka Timothy Metcalfe"
 description = '''
