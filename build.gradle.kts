@@ -37,9 +37,6 @@ dependencies {
     implementation("thedarkcolour:kotlinforforge-neoforge:${property("kff_version")}") {
         exclude("net.neoforged.fancymodloader", "loader")
     }
-
-    //Counter
-    modImplementation("maven.modrinth:cobblemon-counter:${property("counter_version")}")
 }
 
 tasks.getByName<Test>("test") {
