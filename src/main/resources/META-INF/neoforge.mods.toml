@@ -11,21 +11,21 @@ description = '''
 What if your player got KO'd when your Cobblemon team wiped out, like in the games?
 '''
 
-[[dependencies.cobblemon-whiteout]]
+[[dependencies.whiteout]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.21.1]"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.cobblemon-whiteout]]
+[[dependencies.whiteout]]
 modId = "neoforge"
 mandatory = true
 versionRange = "[21.1.66,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.cobblemon-whiteout]]
+[[dependencies.whiteout]]
 modId = "cobblemon"
 mandatory = true
 versionRange = "[1.6.0,1.7.0)"
