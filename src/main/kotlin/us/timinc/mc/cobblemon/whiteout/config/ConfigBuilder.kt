@@ -1,4 +1,4 @@
-package us.timinc.mc.cobblemon.counter.config
+package us.timinc.mc.cobblemon.whiteout.config
 
 import com.google.gson.GsonBuilder
 import java.io.File
