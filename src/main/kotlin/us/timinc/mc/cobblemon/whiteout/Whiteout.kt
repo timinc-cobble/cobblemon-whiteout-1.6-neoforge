@@ -15,7 +15,7 @@ import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
 import net.neoforged.neoforge.event.server.ServerStartedEvent
-import us.timinc.mc.cobblemon.counter.config.ConfigBuilder
+import us.timinc.mc.cobblemon.whiteout.config.ConfigBuilder
 import us.timinc.mc.cobblemon.whiteout.config.WhiteoutConfig
 
 @Mod(Whiteout.MOD_ID)
