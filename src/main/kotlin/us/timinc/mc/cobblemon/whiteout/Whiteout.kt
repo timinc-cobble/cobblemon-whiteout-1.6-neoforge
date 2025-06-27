@@ -11,10 +11,7 @@ import net.minecraft.core.registries.Registries
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.damagesource.DamageType
-import net.neoforged.bus.api.SubscribeEvent
-import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
-import net.neoforged.neoforge.event.server.ServerStartedEvent
 import us.timinc.mc.cobblemon.whiteout.config.ConfigBuilder
 import us.timinc.mc.cobblemon.whiteout.config.WhiteoutConfig
 
@@ -22,20 +19,13 @@ import us.timinc.mc.cobblemon.whiteout.config.WhiteoutConfig
 object Whiteout {
     const val MOD_ID = "whiteout"
     val config: WhiteoutConfig = ConfigBuilder.load(WhiteoutConfig::class.java, MOD_ID)
-    var eventsAttached = false
 
     val POKEBATTLE_DAMAGE_SOURCE: ResourceKey<DamageType> = ResourceKey.create(
         Registries.DAMAGE_TYPE, ResourceLocation.fromNamespaceAndPath(MOD_ID, "pokebattle")
     )
 
-    @EventBusSubscriber
-    object Registration {
-        @SubscribeEvent
-        fun init(e: ServerStartedEvent) {
-            if (eventsAttached) return
-            CobblemonEvents.BATTLE_VICTORY.subscribe(Priority.LOWEST, Whiteout::handleBattleFainted)
-            eventsAttached = true
-        }
+    init {
+        CobblemonEvents.BATTLE_VICTORY.subscribe(Priority.LOWEST, Whiteout::handleBattleFainted)
     }
 
     private fun handleBattleFainted(evt: BattleVictoryEvent) {
