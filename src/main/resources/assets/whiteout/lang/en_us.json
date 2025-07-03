@@ -1,3 +1,4 @@
 {
-  "death.attack.pokebattle": "%1$s whited out!"
+  "death.attack.pokebattle": "%1$s whited out!",
+  "death.attack.pokebattle.fled": "%1$s tried to flee, but died from shame."
 }
