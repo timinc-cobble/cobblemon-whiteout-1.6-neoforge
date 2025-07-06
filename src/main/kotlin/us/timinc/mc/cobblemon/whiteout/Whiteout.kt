@@ -44,7 +44,11 @@ object Whiteout {
 
     private fun handlePokemonFainted(evt: PokemonFaintedEvent) {
         if (config.killIfTeamKnockedOut && (evt.pokemon.getOwnerPlayer()?.isInBattle() == false)) {
-            evt.pokemon.getOwnerPlayer()?.let { killEmAll(listOf(it), POKEBATTLE_DAMAGE_SOURCE) }
+            evt.pokemon.getOwnerPlayer()?.let { player ->
+                if (Cobblemon.storage.getParty(player).all { it.currentHealth == 0 }) {
+                    killEmAll(listOf(player), POKEBATTLE_DAMAGE_SOURCE)
+                }
+            }
         }
     }
 
